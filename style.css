@@ -1,22 +1,172 @@
-.hero-image {
-    object-position: center;
-}
+ :root {
+     --brand-blue: #07507f;
+     --brand-blue-dark: #023a61;
+     --brand-blue-light: #0b76ad;
+     --brand-green: #8fcf1f;
+     --brand-green-light: #b4e34b;
+     --white: #ffffff;
+ }
 
-.gold-text {
-    color: #b99b30;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.9);
-}
+ * {
+     box-sizing: border-box;
+ }
 
-.text-shadow-soft {
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.88), 0 1px 3px rgba(0, 0, 0, 0.86);
-}
+ html {
+     scroll-behavior: smooth;
+ }
 
-.card-shadow {
-    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
-}
+ body {
+     margin: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     background: #06111a;
+ }
 
-@media (max-width: 640px) {
-    .hero-image {
-        object-position: center top;
-    }
-}
+ .hero-image {
+     animation: heroZoom 18s ease-in-out infinite alternate;
+ }
+
+ .brand-text {
+     background: linear-gradient(90deg,
+             var(--brand-blue-light) 0%,
+             var(--brand-green) 55%,
+             var(--brand-green-light) 100%);
+     background-size: 180% auto;
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     animation: brandShine 5s linear infinite;
+ }
+
+ .text-shadow-soft {
+     text-shadow:
+         0 2px 4px rgba(0, 0, 0, 0.92),
+         0 8px 24px rgba(0, 0, 0, 0.75);
+ }
+
+ .logo-glow {
+     filter:
+         drop-shadow(0 8px 20px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 18px rgba(143, 207, 31, 0.2));
+ }
+
+ .brand-divider {
+     width: 90px;
+     height: 3px;
+     border-radius: 999px;
+     background: linear-gradient(90deg,
+             var(--brand-blue-light),
+             var(--brand-green));
+ }
+
+ .countdown-card {
+     position: relative;
+     overflow: hidden;
+     border: 1px solid rgba(143, 207, 31, 0.45);
+     background: linear-gradient(145deg,
+             rgba(7, 80, 127, 0.88),
+             rgba(2, 58, 97, 0.92));
+     box-shadow:
+         0 18px 45px rgba(0, 0, 0, 0.35),
+         inset 0 1px 0 rgba(255, 255, 255, 0.08);
+     transition:
+         transform 0.3s ease,
+         border-color 0.3s ease,
+         box-shadow 0.3s ease;
+ }
+
+ .countdown-card::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -110%;
+     width: 70%;
+     height: 100%;
+     background: linear-gradient(90deg,
+             transparent,
+             rgba(255, 255, 255, 0.15),
+             transparent);
+     transform: skewX(-20deg);
+     transition: left 0.7s ease;
+ }
+
+ .countdown-card:hover {
+     transform: translateY(-6px);
+     border-color: var(--brand-green-light);
+     box-shadow:
+         0 22px 55px rgba(0, 0, 0, 0.42),
+         0 0 24px rgba(143, 207, 31, 0.18);
+ }
+
+ .countdown-card:hover::before {
+     left: 140%;
+ }
+
+ .countdown-label {
+     color: rgba(255, 255, 255, 0.88);
+ }
+
+ .primary-button {
+     background: linear-gradient(135deg,
+             var(--brand-green),
+             var(--brand-green-light));
+     color: var(--brand-blue-dark);
+     box-shadow: 0 14px 35px rgba(143, 207, 31, 0.3);
+     transition:
+         transform 0.3s ease,
+         box-shadow 0.3s ease,
+         filter 0.3s ease;
+ }
+
+ .primary-button:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 18px 42px rgba(143, 207, 31, 0.42);
+     filter: brightness(1.06);
+ }
+
+ .secondary-button {
+     border: 1px solid rgba(143, 207, 31, 0.65);
+     background: linear-gradient(135deg,
+             rgba(7, 80, 127, 0.92),
+             rgba(2, 58, 97, 0.92));
+     color: var(--white);
+     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.26);
+     transition:
+         transform 0.3s ease,
+         border-color 0.3s ease,
+         background 0.3s ease;
+ }
+
+ .secondary-button:hover {
+     transform: translateY(-3px);
+     border-color: var(--brand-green-light);
+     background: linear-gradient(135deg,
+             var(--brand-blue-light),
+             var(--brand-blue-dark));
+ }
+
+ .trust-item {
+     color: rgba(255, 255, 255, 0.9);
+ }
+
+ @keyframes heroZoom {
+     from {
+         transform: scale(1);
+     }
+
+     to {
+         transform: scale(1.06);
+     }
+ }
+
+ @keyframes brandShine {
+     to {
+         background-position: 180% center;
+     }
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+
+     .hero-image,
+     .brand-text {
+         animation: none;
+     }
+ }

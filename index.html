@@ -4,117 +4,191 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lavista Estate Launch</title>
-    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+
+    <title>Customized Polycast Pvt. Ltd. | Launching Soon</title>
+
+    <meta name="description"
+        content="Customized Polycast Pvt. Ltd. manufactures high-quality polyurethane rods, sheets, rollers, wheels, bushes and customized industrial polymer components." />
+
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="bg-black text-white">
+<body class="text-white">
 
-    <section class="relative min-h-screen overflow-hidden px-4 py-12 sm:px-6 lg:px-8">
+    <main>
+        <section class="relative min-h-screen overflow-hidden px-4 py-10 sm:px-6 sm:py-8 lg:px-8">
 
-        <!-- Background Image -->
-        <div class="absolute inset-0">
-            <picture class="block h-full w-full">
-                <source media="(max-width: 640px)"
-                    srcset="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=900&auto=format&fit=crop" />
-                <source media="(max-width: 1024px)"
-                    srcset="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1400&auto=format&fit=crop" />
-                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1920&auto=format&fit=crop"
-                    alt="Modern luxury estate interior" class="hero-image h-full w-full object-cover" />
-            </picture>
-            <div class="absolute inset-0 bg-black/55"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/45"></div>
-        </div>
+            <!-- Background Image -->
+            <div class="absolute inset-0">
+                <img src="./assets/front.jpg" alt="Customized Polycast" class="hero-image h-full w-full object-cover" />
 
-        <!-- Content -->
-        <div class="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl items-center justify-center">
-            <div class="w-full text-center">
+                <!-- Reduced opacity overlays so the image remains visible -->
+                <div class="absolute inset-0 bg-black/45"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#023a61]/35 via-black/20 to-black/55"></div>
 
-                <!-- Launch Badge -->
-                <div
-                    class="text-shadow-soft mb-5 flex items-center justify-center gap-2 text-xs text-white/80 sm:text-sm">
-                    <i data-lucide="clock" class="h-4 w-4 text-[#b99b30]"></i>
-                    <span class="uppercase tracking-[0.28em] sm:tracking-[0.34em]">Launching Soon</span>
+                <!-- Soft logo-color highlights -->
+                <div class="absolute inset-0" style="background:
+                        radial-gradient(circle at 20% 18%, rgba(143, 207, 31, 0.12), transparent 30%),
+                        radial-gradient(circle at 82% 72%, rgba(7, 80, 127, 0.24), transparent 38%);">
                 </div>
+            </div>
 
-                <!-- Logo + Heading -->
-                <div
-                    class="mx-auto flex max-w-5xl flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 md:gap-5">
+            <!-- Decorative Glow -->
+            <div class="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full blur-3xl"
+                style="background-color: rgba(143, 207, 31, 0.12);">
+            </div>
 
-                    <img src="./assets/logo.png" alt="Lavista Logo"
-                        class="h-14 w-auto object-contain sm:h-16 md:h-20 lg:h-24" />
+            <div class="pointer-events-none absolute -right-24 bottom-20 h-80 w-80 rounded-full blur-3xl"
+                style="background-color: rgba(7, 80, 127, 0.22);">
+            </div>
 
-                    <h1 class="gold-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
-                        Lavista Estate
+            <!-- Main Content -->
+            <div class="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl items-center justify-center">
+
+                <div class="w-full text-center">
+
+                    <div class="text-shadow-soft mb-6 inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold text-white backdrop-blur-md sm:text-sm">
+
+                        <i data-lucide="factory" class="h-4 w-4" style="color: var(--brand-green);">
+                        </i>
+
+                        <span class="font-semibold text-white">
+                            Website Launching Soon
+                        </span>
+                    </div>
+
+                    <!-- Logo Left and Text Right -->
+                    <div
+                        class="mx-auto flex max-w-5xl flex-col items-center justify-center gap-6 sm:gap-8 md:flex-row md:justify-between md:gap-2 lg:gap-2">
+
+                        <!-- Logo Left -->
+                        <div class="flex w-full items-center justify-center">
+                            <img src="./assets/logo2.png" alt="Customized Polycast Pvt. Ltd." class="logo-glow h-22 w-auto sm:h-28 md:h-32 lg:h-28 rounded-full"/>
+                        </div>
+
+    
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1
+                        class="text-shadow-soft mx-auto mt-7 max-w-5xl text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
+                        Precision Polyurethane Solutions for
+                        <span class="text-white">Modern Industries</span>
                     </h1>
 
+                    <!-- Product Highlights -->
+                    <div
+                        class="text-shadow-soft mx-auto mt-6 flex max-w-4xl flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs font-medium text-white sm:text-sm">
+
+                        <span>PU Rods</span>
+                        <span style="color: var(--brand-green);">•</span>
+
+                        <span>PU Sheets</span>
+                        <span style="color: var(--brand-green);">•</span>
+
+                        <span>PU Rollers</span>
+                        <span style="color: var(--brand-green);">•</span>
+
+                        <span>PU Wheels</span>
+                        <span style="color: var(--brand-green);">•</span>
+
+                        <span>PU Bushes</span>
+                        <span style="color: var(--brand-green);">•</span>
+
+                        <span>Custom Components</span>
+                    </div>
+
+                    <!-- Countdown -->
+                    <div class="mx-auto mt-9 grid max-w-5xl grid-cols-2 gap-3 sm:mt-10 sm:grid-cols-4 sm:gap-5">
+
+                        <div class="countdown-card rounded-2xl px-4 py-5 sm:px-5 sm:py-6">
+                            <i data-lucide="calendar-days" class="mx-auto mb-4 h-5 w-5 sm:h-6 sm:w-6"
+                                style="color: var(--brand-green);"></i>
+                            <p id="days" class="brand-text text-3xl font-extrabold sm:text-4xl md:text-5xl">00</p>
+                            <span
+                                class="countdown-label mt-1 block text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-xs">Days</span>
+                        </div>
+
+                        <div class="countdown-card rounded-2xl px-4 py-5 sm:px-5 sm:py-6">
+                            <i data-lucide="clock-3" class="mx-auto mb-4 h-5 w-5 sm:h-6 sm:w-6"
+                                style="color: var(--brand-green);"></i>
+                            <p id="hours" class="brand-text text-3xl font-extrabold sm:text-4xl md:text-5xl">00</p>
+                            <span
+                                class="countdown-label mt-1 block text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-xs">Hours</span>
+                        </div>
+
+                        <div class="countdown-card rounded-2xl px-4 py-5 sm:px-5 sm:py-6">
+                            <i data-lucide="timer" class="mx-auto mb-4 h-5 w-5 sm:h-6 sm:w-6"
+                                style="color: var(--brand-green);"></i>
+                            <p id="minutes" class="brand-text text-3xl font-extrabold sm:text-4xl md:text-5xl">00</p>
+                            <span
+                                class="countdown-label mt-1 block text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-xs">Minutes</span>
+                        </div>
+
+                        <div class="countdown-card rounded-2xl px-4 py-5 sm:px-5 sm:py-6">
+                            <i data-lucide="zap" class="mx-auto mb-4 h-5 w-5 sm:h-6 sm:w-6"
+                                style="color: var(--brand-green);"></i>
+                            <p id="seconds" class="brand-text text-3xl font-extrabold sm:text-4xl md:text-5xl">00</p>
+                            <span
+                                class="countdown-label mt-1 block text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-xs">Seconds</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row">
+
+                        <a href="https://wa.me/91XXXXXXXXXX?text=Hello%20Customized%20Polycast%20Team%2C%20I%20would%20like%20to%20know%20more%20about%20your%20polyurethane%20products%20and%20custom%20industrial%20solutions."
+                            target="_blank" rel="noopener noreferrer"
+                            class="primary-button inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold sm:w-auto sm:px-8 sm:text-base">
+
+                            <i data-lucide="message-circle" class="h-5 w-5"></i>
+                            Request Product Catalogue
+                        </a>
+
+                        <a href="mailto:info@customizedpolycast.com"
+                            class="secondary-button inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold backdrop-blur-md sm:w-auto sm:px-8 sm:text-base">
+
+                            <i data-lucide="mail" class="h-5 w-5" style="color: var(--brand-green);"></i>
+                            Email Our Team
+                        </a>
+                    </div>
+
+                    <!-- Trust Points -->
+                    <div
+                        class="mx-auto mt-7 flex max-w-4xl flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs sm:text-sm">
+
+                        <div class="trust-item flex items-center gap-2">
+                            <i data-lucide="badge-check" class="h-4 w-4" style="color: var(--brand-green);"></i>
+                            <span>Quality Assured</span>
+                        </div>
+
+                        <div class="trust-item flex items-center gap-2">
+                            <i data-lucide="settings" class="h-4 w-4" style="color: var(--brand-green);"></i>
+                            <span>Customized Manufacturing</span>
+                        </div>
+
+                        <div class="trust-item flex items-center gap-2">
+                            <i data-lucide="shield-check" class="h-4 w-4" style="color: var(--brand-green);"></i>
+                            <span>Industrial Durability</span>
+                        </div>
+                    </div>
+
                 </div>
-
-                <!-- Taglines -->
-                <p
-                    class="text-shadow-soft mx-auto mt-4 max-w-3xl text-base font-medium text-white/90 sm:text-lg md:mt-5 md:text-xl lg:text-3xl">
-                    Your Trusted Property Partner in Ahmedabad
-                </p>
-
-                <p class="text-shadow-soft mx-auto mt-3 max-w-2xl text-sm leading-7 text-white/70 sm:text-base md:mt-4">
-                    No Brokerage &bull; Direct Deal &bull; Transparent Pricing
-                </p>
-
-                <!-- Countdown -->
-                <div class="mx-auto mt-8 grid max-w-5xl grid-cols-2 gap-4 sm:mt-10 sm:grid-cols-4 sm:gap-5 lg:mt-8">
-
-                    <div
-                        class="card-shadow rounded-2xl border border-[#b99b30]/25 bg-white/10 px-4 py-5 backdrop-blur-md sm:px-5 sm:py-6">
-                        <i data-lucide="calendar" class="mx-auto mb-4 h-5 w-5 text-[#b99b30]"></i>
-                        <p id="days" class="gold-text text-3xl font-bold sm:text-4xl md:text-5xl">00</p>
-                        <span
-                            class="mt-1 block text-[11px] uppercase tracking-[0.22em] text-white/65 sm:text-xs">Days</span>
-                    </div>
-
-                    <div
-                        class="card-shadow rounded-2xl border border-[#b99b30]/25 bg-white/10 px-4 py-5 backdrop-blur-md sm:px-5 sm:py-6">
-                        <i data-lucide="clock-3" class="mx-auto mb-4  h-5 w-5 text-[#b99b30]"></i>
-                        <p id="hours" class="gold-text text-3xl font-bold sm:text-4xl md:text-5xl">00</p>
-                        <span
-                            class="mt-1 block text-[11px] uppercase tracking-[0.22em] text-white/65 sm:text-xs">Hours</span>
-                    </div>
-
-                    <div
-                        class="card-shadow rounded-2xl border border-[#b99b30]/25 bg-white/10 px-4 py-5 backdrop-blur-md sm:px-5 sm:py-6">
-                        <i data-lucide="timer" class="mx-auto mb-4 h-5 w-5 text-[#b99b30]"></i>
-                        <p id="minutes" class="gold-text text-3xl font-bold sm:text-4xl md:text-5xl">00</p>
-                        <span
-                            class="mt-1 block text-[11px] uppercase tracking-[0.22em] text-white/65 sm:text-xs">Minutes</span>
-                    </div>
-
-                    <div
-                        class="card-shadow rounded-2xl border border-[#b99b30]/25 bg-white/10 px-4 py-5 backdrop-blur-md sm:px-5 sm:py-6">
-                        <i data-lucide="zap" class="mx-auto mb-4  h-5 w-5 text-[#b99b30]"></i>
-                        <p id="seconds" class="gold-text text-3xl font-bold sm:text-4xl md:text-5xl">00</p>
-                        <span
-                            class="mt-1 block text-[11px] uppercase tracking-[0.22em] text-white/65 sm:text-xs">Seconds</span>
-                    </div>
-
-                </div>
-
-                <!-- CTA -->
-                <div class="mt-8 sm:mt-10">
-                    <a href="https://wa.me/919213684966?text=Hi%20Lavista%20Estate%2C%20I%20am%20interested%20in%20upcoming%20projects.%20Please%20share%20details."
-                        target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center justify-center gap-2 rounded-full bg-[#b99b30] px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#d4b73f] sm:px-8 sm:py-3.5 sm:text-base">
-                        <i data-lucide="message-circle" class="h-5 w-5"></i>
-                        Get Early Access on WhatsApp
-                    </a>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <script src="./script.js"></script>
+
+    <script>
+        if (typeof lucide !== "undefined") {
+            lucide.createIcons();
+        }
+    </script>
 
 </body>
 

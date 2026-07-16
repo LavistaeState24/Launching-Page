@@ -1,29 +1,68 @@
-const targetDate = new Date("May 30, 2026 00:00:00").getTime();
+document.addEventListener("DOMContentLoaded", function () {
 
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    if (distance <= 0) {
-        document.getElementById("days").innerText = "00";
-        document.getElementById("hours").innerText = "00";
-        document.getElementById("minutes").innerText = "00";
-        document.getElementById("seconds").innerText = "00";
-        return;
+    // Initialize Lucide icons
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons();
     }
 
-    const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const h = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const m = Math.floor((distance / (1000 * 60)) % 60);
-    const s = Math.floor((distance / 1000) % 60);
+    /*
+     * Update website launch date here.
+     * Format: YYYY-MM-DDTHH:MM:SS
+     */
+    const launchDate = new Date("2026-10-30T10:00:00").getTime();
 
-    document.getElementById("days").innerText = String(d).padStart(2, "0");
-    document.getElementById("hours").innerText = String(h).padStart(2, "0");
-    document.getElementById("minutes").innerText = String(m).padStart(2, "0");
-    document.getElementById("seconds").innerText = String(s).padStart(2, "0");
-}
+    const daysElement = document.getElementById("days");
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    const secondsElement = document.getElementById("seconds");
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
+    let countdownInterval;
 
-lucide.createIcons();
+    function formatNumber(number) {
+        return String(number).padStart(2, "0");
+    }
+
+    function updateCountdown() {
+        const currentTime = new Date().getTime();
+        const distance = launchDate - currentTime;
+
+        if (distance <= 0) {
+            clearInterval(countdownInterval);
+
+            daysElement.textContent = "00";
+            hoursElement.textContent = "00";
+            minutesElement.textContent = "00";
+            secondsElement.textContent = "00";
+
+            return;
+        }
+
+        const days = Math.floor(
+            distance / (1000 * 60 * 60 * 24)
+        );
+
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
+
+        const seconds = Math.floor(
+            (distance % (1000 * 60)) /
+            1000
+        );
+
+        daysElement.textContent = formatNumber(days);
+        hoursElement.textContent = formatNumber(hours);
+        minutesElement.textContent = formatNumber(minutes);
+        secondsElement.textContent = formatNumber(seconds);
+    }
+
+    updateCountdown();
+
+    countdownInterval = setInterval(updateCountdown, 1000);
+});
