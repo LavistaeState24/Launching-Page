@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
      * Update website launch date here.
      * Format: YYYY-MM-DDTHH:MM:SS
      */
-    const launchDate = new Date("2026-10-30T10:00:00").getTime();
+    const launchDate = new Date("2027-12-30T10:00:00").getTime();
 
     const daysElement = document.getElementById("days");
     const hoursElement = document.getElementById("hours");
